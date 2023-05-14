@@ -1,0 +1,66 @@
+@use "../utils/" as *;
+
+.why-choose-us-container {
+  @include flexContainer(column);
+  align-items: center;
+  width: 100%;
+  color: white;
+  padding-bottom: 6rem;
+  position: relative;
+
+  .why-choose-us-bg{
+    @include parallaxBg;
+    background-image: url(../images/background-anim.svg);
+  }
+
+  .why-choose-us-header {
+    .why-choose-us-heading {
+      font-size: 2rem;
+      font-family: $heading-font;
+      margin: 3rem 0rem;
+    }
+  }
+
+  .why-choose-us-bullet-points-container {
+    @include flexContainer(row);
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+
+    .bullet-point {
+      @include flexContainer(row);
+      align-items: center;
+      margin: 1rem 1rem;
+      max-width: 15rem;
+      position: relative;
+
+      .bullet-point-img-container{
+        display: none;
+        @include sm {
+            display: block;
+        }
+        width: 6rem;
+        margin: 1rem;
+        .bullet-point-img {
+            width: 100%;
+            height: auto;
+        }
+      }
+      @include sm {
+        max-width: 20rem;
+      }
+      @include md {
+        max-width: 30rem;
+        margin: 2rem 0rem;
+      }
+
+      .bullet-point-heading {
+        font-size: 1.5rem;
+      }
+
+      
+      }
+     
+  }
+}

@@ -1,0 +1,82 @@
+@use "../utils/" as *;
+
+
+.not-found-main-content {
+    @include flexContainer(column);
+    width: 100%;
+    min-height: 90vh;
+    position: relative;
+    background-color: #222;
+    @include md {
+        background-color: transparent  ;
+    }
+    .not-found-bg {
+        @include md {
+            @include parallaxBg;
+          background-image: url(../images/background-anim.svg);
+    }
+}
+
+.not-found-header{
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 1rem;
+    .not-found-heading {
+        font-size: 1.3rem;
+        font-family: $heading-font;
+        text-align: left;
+        margin-left: 1rem;
+        @include sm {
+          font-size: 4rem;
+        }
+        @include xl {
+          font-size: 6rem;
+        }
+        &::before {
+            content: '';
+            display: block;
+            width: 50%;
+            padding-top: 0.5rem;
+            border-top: 3px solid white;
+            @include sm {
+                border-top: 5px solid white;
+              }
+              @include xl {
+                width: 25%;
+                border-top: 10px solid white;
+              }
+        }
+      }
+      .not-found-subheading {
+        text-align: left;
+        font-size: 0.9rem;
+        margin-left: 1rem;
+        @include sm {
+            font-size: 2rem;
+          }
+          @include xl {
+            font-size: 3rem;
+          }
+        &::after {
+            content: '';
+            display: block;
+            width: 75%;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid white;
+            @include sm {
+                border-bottom: 5px solid white;
+              }
+              @include xl {
+                width: 50%;
+                border-bottom: 10px solid white;
+              }
+        }
+      }
+    }
+    .not-found-text{
+        color: white;
+        font-size: 2rem;
+        margin: auto 1rem;
+    }
+}

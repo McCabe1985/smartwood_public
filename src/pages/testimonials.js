@@ -1,34 +1,70 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import Header from "../components/home/Header";
-import ServicesSection from "../components/home/services/ServicesSection";
-import ChooseWoodSection from "../components/home/choose-wood-flooring/ChooseWoodSection";
-import ChooseUsSection from "../components/home/why-choose-us/ChooseUsSection";
-import BackLink from "../components/home/smartwood_backlink/BackLink";
-import ReferralBanner from "../components/home/referral_banner/ReferralBanner";
+import Stars from "../images/stars.svg";
 
 
 
-export default function Home({ data }) {
+
+export default function Testimonials({data}) {
+  const testimonialSource = data.allTestimonialsJson.nodes
+    
   return (
     <Layout>
-      <main className="main-content-container">
-        <Header />
-        <ReferralBanner />
-        <BackLink />
-        <ServicesSection />
-        <ChooseWoodSection />
-        <ChooseUsSection />
+      <main className="testimonials-main-content-container">
+        <div className="testimonials-page-bg"></div>
+        <header className="testimonials-header">
+          <h1 className="testimonials-heading">Testimonials</h1>
+          <p className="testimonials-subheading">
+            Here's what our customers are saying
+          </p>
+        </header>
+        <section className="testimonial-block-container">
+          {
+          testimonialSource.map((testimonialCard) => (
+            <article
+              className="testimonial-container"
+              key={testimonialCard.name}
+            >
+              <h3 className="testimonial-heading">{testimonialCard.heading}</h3>
+              <blockquote className="testimonial-text">
+                {testimonialCard.testimonial}
+                <figcaption className="testimonial-author">
+                  {testimonialCard.name}
+                </figcaption>
+              </blockquote>
+              <img
+                src={Stars}
+                alt="5 stars"
+                className="testimonial-img"
+              />
+            </article>
+          ))
+          }
+        </section>
       </main>
     </Layout>
   );
 }
+
+export const query = graphql`
+query TestimonialsQuery {
+  allTestimonialsJson {
+    nodes {
+      heading
+      name
+      testimonial
+    }
+  }
+}
+`;
 
 export const Head = () => (
   <>
     <meta charSet="UTF-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
     <meta
       name="description"
       content="Expert Floor Fitters, Specialising in Hardwood, Engineered Wood, LVT and Restoration in Kilwinning, North Ayrshire"

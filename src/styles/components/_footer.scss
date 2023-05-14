@@ -1,0 +1,128 @@
+@use "../utils/" as *;
+
+.footer-container {
+  @include flexContainer(column);
+  align-items: center;
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding-top: 2rem;
+.footer-sub-container {
+  @include flexContainer(row);
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  @include breakpoint(300px) {
+    padding-left: 4rem;
+  }
+
+  @include xl {
+    @include flexContainer(row);
+    align-items: flex-start;
+    padding-top: 2rem;
+
+  }
+
+  .footer-logo-container{
+    margin-bottom: 2rem;
+    width: 60%;
+    @include lg {
+      width: 30%;
+      margin-top: auto;
+    margin-bottom: auto;
+    }
+    .footer-logo{
+      width: 90%;
+      height: auto;
+    }
+  }
+ 
+  
+  .footer-item {
+    @include flexContainer(column);
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    width: 60%;
+    @include lg {
+      width: 20%;
+    }
+    
+  
+ 
+
+    .footer-subheading{
+        font-family: $heading-font;
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid white;
+        margin-bottom: 2rem;
+    }
+    .footer-link {
+        margin-bottom: 1rem;
+        &:hover {
+          color: $accent-clr;
+          text-decoration: underline;
+        }
+    }
+    .footer-contact{
+      margin-bottom: 1rem;
+    }
+    .footer-contact-subheading{
+      border-bottom: 1px solid white;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-number {
+      cursor: pointer;
+      &:hover{
+        color: $accent-clr;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+.copyright-text {
+  text-align: center;
+  margin: 0 0.5rem;
+}
+span.copyright-text{
+  width: 90%;
+  text-align: center;
+}
+.mccabe-link-text {
+  margin: 1rem;
+  .mccabe-link {
+    color:#99C0FF;
+    cursor: pointer;
+    &:hover {
+      color: white;
+      text-decoration: underline;
+     
+
+    }
+  }
+}
+
+
+.social-media-divider {
+  @include flexContainer(row);
+  flex-wrap: wrap;
+
+}
+.social-link{
+  cursor: pointer;
+margin: 1rem 1rem 1rem 0;
+}
+
+.social-icon {
+  height: 3.5rem;
+  width: auto;
+}
+.mybuilder-icon{
+  height: 2rem;
+  width: auto;
+}
+}

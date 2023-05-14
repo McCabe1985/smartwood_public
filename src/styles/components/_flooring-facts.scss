@@ -1,0 +1,82 @@
+@use "../utils/" as *;
+
+.choose-wood-flooring-container {
+  @include flexContainer(column);
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  position: relative;
+  line-height: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+  .choose-wood-flooring-bg {
+    @include parallaxBg;
+      background-image: url(../images/sw-bg1.svg);
+  }
+
+  .choose-wood-flooring-header {
+    width: 90%;
+    @include lg {
+      margin: 6rem 0rem 3rem 0rem;
+    }
+    .choose-wood-flooring-heading {
+      font-size: 2rem;
+      font-family: $heading-font;
+      @include lg {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  .wood-flooring-facts-container {
+    @include flexContainer(row);
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    width: 100%;
+    .wood-flooring-facts-divider {
+      @include flexContainer(column);
+      margin-bottom: 2rem;
+      @include md{
+        width: 45%;
+        margin-bottom: 5rem;
+      }
+      
+      
+
+      .wood-flooring-single-fact-container {
+        @include flexContainer(row);
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        margin: 1.5rem 0;
+       
+
+        .wood-flooring-fact-img-container {
+          width: 20%;
+          @include md {
+            width: 10rem;
+          }
+          .wood-flooring-fact-img {
+            width: 100%;
+            height: auto;
+        
+          }
+        }
+        .wood-flooring-fact-text-container{
+          @include flexContainer(column);
+          width: 15rem;
+          @include md {
+            width: 70%;
+          }
+          .wood-flooring-fact-heading{
+            font-family: $emphasis-font;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

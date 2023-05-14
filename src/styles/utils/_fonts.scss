@@ -1,0 +1,19 @@
+/*@font-face {
+    font-family: 'Anton';
+    src: local('Anton'), url("../fonts/AquilineTwo.ttf") format('truetype');
+}*/
+@font-face {
+    font-family: 'RobotoSlab-Black';
+    src: local('RobotoSlab-Black'), url("./fonts/RobotoSlab-Black.ttf") format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: local('Roboto-Regular'), url("./fonts/Roboto-Regular.ttf") format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto-Black';
+    src: local('Roboto-Black'), url("./fonts/Roboto-Black.ttf") format('truetype');
+    font-display: swap;
+}

@@ -1,0 +1,10 @@
+User-agent: *
+Allow:/
+Allow:/about/
+Disallow:/testimonials/
+Noindex:/testimonials/
+Disallow:/gallery/
+Noindex:/gallery/
+Disallow:/contact/
+Noindex:/contact/
+

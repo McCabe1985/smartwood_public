@@ -1,0 +1,18 @@
+@use '../utils/' as *;
+
+.app-container {
+    @include flexContainer(column);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    overflow: hidden;
+    line-height: 1.5;
+   
+    font-family: $primary-font;
+}
+.main-content-container{
+    @include flexContainer(column);
+    align-items: center;
+    width: 100%;
+}

@@ -1,0 +1,102 @@
+@use "../utils/" as *;
+
+.about-main-content {
+  @include flexContainer(column);
+  width: 100%;
+  min-height: 90vh;
+  position: relative;
+  background-color: #222;
+  color: white;
+  line-height: 2;
+  @include md {
+    background-color: transparent;
+  }
+  .about-page-bg {
+    @include md {
+      @include parallaxBg;
+      background-image: url(../images/background-anim.svg);
+    }
+  }
+
+  .about-us-header{
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 1rem;
+    .about-us-heading {
+        font-size: 1.3rem;
+        font-family: $heading-font;
+        text-align: left;
+        margin-left: 1rem;
+        @include sm {
+          font-size: 4rem;
+        }
+        @include xl {
+          font-size: 6rem;
+        }
+        &::before {
+            content: '';
+            display: block;
+            width: 50%;
+            padding-top: 0.5rem;
+            border-top: 3px solid white;
+            @include sm {
+                border-top: 5px solid white;
+              }
+              @include xl {
+                width: 25%;
+                border-top: 10px solid white;
+              }
+        }
+      }
+
+      .about-us-subheading {
+        text-align: left;
+        font-size: 0.9rem;
+        margin-left: 1rem;
+        @include sm {
+            font-size: 2rem;
+          }
+          @include xl {
+            font-size: 3rem;
+          }
+        &::after {
+            content: '';
+            display: block;
+            width: 75%;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid white;
+            @include sm {
+                border-bottom: 5px solid white;
+              }
+              @include xl {
+                width: 50%;
+                border-bottom: 10px solid white;
+              }
+        }
+      }
+}
+
+  .about-us-text {
+    margin: 2rem 0rem;
+    padding: 1rem;
+
+    @include md {
+      font-size: 1.5rem;
+      margin: 1rem 0rem;
+      @include lg {
+        width: 60%;
+      }
+    }
+    .about-us-link{
+      color: silver;
+      cursor: pointer;
+     @include md{
+      font-size: 1.6rem;
+     }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

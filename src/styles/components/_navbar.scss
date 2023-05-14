@@ -1,0 +1,135 @@
+@use "../utils/" as *;
+
+.nav-container {
+  @include flexContainer(row);
+  background-color: black;
+  width: 100vw;
+  @include lg{
+    padding: 1rem;
+    justify-content: space-evenly;
+  }
+  .logo-container {
+    width: 80%;
+    height: auto;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    
+    @include lg {
+      width: 50%;
+    }
+
+    .logo {
+      max-width: 100%;
+      height: auto;
+      width: auto;
+    }
+  }
+
+  .nav-menu {
+    @include flexContainer(row);
+    margin-right: 0.5rem;
+
+    
+    .nav-link {
+      display: none;
+      @include lg {
+        display: block;
+        color: white;
+        font-size: 1.5rem;
+        font-family: $heading-font;
+        padding: 0.3em 1em;
+        cursor: pointer;
+        &:hover {
+          color: $accent-clr;
+          text-decoration: underline;
+        }
+      }
+      
+    }
+    .nav-call-to-action {
+      display: none;
+      @include lg {
+        display: block;
+        color: white;
+        font-size: 1.2rem;
+        font-family: $heading-font;
+        padding:  1em 1.5em;
+        color: black;
+        background-color: $accent-clr;
+        border-radius: 5px;
+        text-align: center;
+        &:hover {
+          background-color: #fff;
+          box-shadow: 0px 0px 0.1em 0.09em #fff;
+        }
+      }
+    }
+  }
+
+  .hamburger-button {
+    color: white;
+    font-size: 3rem;
+    margin-right: 0.5rem;
+    @include lg {
+      display: none;
+    }
+    .hamburger {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+}
+
+
+.mobile-nav-container {
+  width: 100%;
+  color: white;
+  background: black;
+
+  .mobile-navbar {
+    width: 100%;
+
+    .mobile-nav-item {
+      @include flexContainer(column);
+      width: 100%;
+      margin: 0.3rem 0;
+      font-size: 2rem;
+      font-family: $heading-font;
+    }
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-out {
+  animation: slideOut 0.2s ease 0s 1 normal forwards;
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+.active {
+  text-decoration: underline;
+}

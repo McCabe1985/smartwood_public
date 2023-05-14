@@ -1,34 +1,64 @@
+import { graphql } from "gatsby";
 import React from "react";
 import Layout from "../components/Layout";
-import Header from "../components/home/Header";
-import ServicesSection from "../components/home/services/ServicesSection";
-import ChooseWoodSection from "../components/home/choose-wood-flooring/ChooseWoodSection";
-import ChooseUsSection from "../components/home/why-choose-us/ChooseUsSection";
-import BackLink from "../components/home/smartwood_backlink/BackLink";
-import ReferralBanner from "../components/home/referral_banner/ReferralBanner";
 
 
 
-export default function Home({ data }) {
+export default function Gallery({ data }) {
+  const gallerySources = data.allImageSharp.nodes;
   return (
     <Layout>
-      <main className="main-content-container">
-        <Header />
-        <ReferralBanner />
-        <BackLink />
-        <ServicesSection />
-        <ChooseWoodSection />
-        <ChooseUsSection />
+      <main className="gallery-main-content">
+        <div className="gallery-bg"></div>
+        <header className="gallery-header">
+          <h1 className="gallery-heading"> Our Work</h1>
+          <p className="gallery-subheading">
+            Top Quality Products Laid by Experts
+          </p>
+        </header>
+
+        <section className="gallery-container">
+          {gallerySources.map((image) => (
+            <article className="gallery-item-container" key={image.fluid.src}>
+              <a
+                href={image.fluid.src}
+                className="gallery-item-img-container"
+              >
+                <img
+                  src={image.fluid.src}
+                  alt="an example of flooring"
+                  height={image.fluid.presentationHeight}
+                  width={image.fluid.presentationWidth}
+                  className="gallery-item-img"
+                  loading="lazy"
+                />
+              </a>
+            </article>
+          ))}
+        </section>
       </main>
     </Layout>
   );
 }
+
+export const query = graphql`
+  query GalleryImages {
+    allImageSharp {
+      nodes {
+        fluid {
+        ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 export const Head = () => (
   <>
     <meta charSet="UTF-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
     <meta
       name="description"
       content="Expert Floor Fitters, Specialising in Hardwood, Engineered Wood, LVT and Restoration in Kilwinning, North Ayrshire"

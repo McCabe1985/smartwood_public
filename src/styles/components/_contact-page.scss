@@ -1,0 +1,168 @@
+@use "../utils/" as *;
+
+
+.contact-main {
+    @include flexContainer(column);
+    width: 100%;
+    min-height: 90vh;
+    position: relative;
+    background-color: #222;
+    @include md {
+        background-color: transparent  ;
+    }
+    .contact-page-bg {
+        @include md {
+            @include parallaxBg;
+          background-image: url(../images/background-anim.svg);
+    }
+}
+.contact-header{
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 1rem;
+  .contact-heading {
+      font-size: 1.3rem;
+      font-family: $heading-font, serif;
+      text-align: left;
+      margin-left: 1rem;
+      @include sm {
+        font-size: 4rem;
+      }
+      @include xl {
+        font-size: 6rem;
+      }
+      &::before {
+          content: '';
+          display: block;
+          width: 50%;
+          padding-top: 0.5rem;
+          border-top: 3px solid white;
+          @include sm {
+              border-top: 5px solid white;
+            }
+            @include xl {
+              width: 25%;
+              border-top: 10px solid white;
+            }
+      }
+    }
+
+    .contact-subheading {
+      text-align: left;
+      font-size: 0.9rem;
+      margin-left: 1rem;
+      @include sm {
+          font-size: 2rem;
+        }
+        @include xl {
+          font-size: 3rem;
+        }
+      &::after {
+          content: '';
+          display: block;
+          width: 75%;
+          padding-bottom: 0.5rem;
+          border-bottom: 3px solid white;
+          @include sm {
+              border-bottom: 5px solid white;
+            }
+            @include xl {
+              width: 50%;
+              border-bottom: 10px solid white;
+            }
+      }
+    }
+}
+
+.contact-form {
+    @include flexContainer(column);
+    align-items: center;
+    max-width: 25rem;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 4rem 0rem;
+    @include lg {
+        min-width: 40%;
+    }
+    .form-fields {
+        @include flexContainer(column);
+        align-items: center;
+      width: 90%;
+      font-size: 0.9rem;
+      margin: 1rem 0rem;
+      .spam-filter-container {
+        margin: 1rem;
+      }
+      .form-heading {
+        font-family: $heading-font, serif;
+        font-size: 2.5rem;
+        margin: auto;
+        .emphasis {
+          color: $accent-clr;
+        }
+      }
+
+        .form-label {
+          border: 0;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+        .form-input {
+          width: 90%;
+          padding: 0.5rem;
+          border: none;
+          border-bottom: 1.5px solid $accent-clr;
+          margin-top: 1rem;
+          @include lg {
+            margin-top: 3rem;
+          }
+        }
+        .error{
+          color: red;
+          margin-top: 1rem;
+        }
+        .form-message {
+          border: 1.5px solid $accent-clr;
+          border-radius: 5px;
+          width: 90%;
+          margin-top: 2rem;
+          padding: 0.5rem;
+          @include lg {
+            margin-top: 4rem;
+          }
+        }
+      
+    }
+    .form-button-container {
+      @include flexContainer(row);
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      height: 4rem;
+      .submit-button {
+        margin-right: 1rem;
+        font-size: 1.5rem;
+        font-family: $heading-font;
+        padding: 0.3em 1em;
+        background-color: $accent-clr;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        &:hover {
+          background-color: black;
+          color: white;
+          box-shadow: 0px 0px 0.3em 0.1em #333;
+        }
+      }
+    }
+  }
+   
+}
+
+

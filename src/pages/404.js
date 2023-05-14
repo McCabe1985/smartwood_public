@@ -1,24 +1,23 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Header from "../components/home/Header";
-import ServicesSection from "../components/home/services/ServicesSection";
-import ChooseWoodSection from "../components/home/choose-wood-flooring/ChooseWoodSection";
-import ChooseUsSection from "../components/home/why-choose-us/ChooseUsSection";
-import BackLink from "../components/home/smartwood_backlink/BackLink";
-import ReferralBanner from "../components/home/referral_banner/ReferralBanner";
 
 
 
-export default function Home({ data }) {
+
+export default function NotFound() {
   return (
     <Layout>
-      <main className="main-content-container">
-        <Header />
-        <ReferralBanner />
-        <BackLink />
-        <ServicesSection />
-        <ChooseWoodSection />
-        <ChooseUsSection />
+      <main className="not-found-main-content">
+        <div className="not-found-bg"></div>
+        <header className="not-found-header">
+          <h1 className="not-found-heading"> Uh oh...</h1>
+          <p className="not-found-subheading">Page not found...</p>
+        </header>
+
+        <p className="not-found-text">
+          The page you have requested hasn't been found. Please try again later,
+          or get in touch to report the problem.
+        </p>
       </main>
     </Layout>
   );

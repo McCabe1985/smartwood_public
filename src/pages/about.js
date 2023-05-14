@@ -1,28 +1,33 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Header from "../components/home/Header";
-import ServicesSection from "../components/home/services/ServicesSection";
-import ChooseWoodSection from "../components/home/choose-wood-flooring/ChooseWoodSection";
-import ChooseUsSection from "../components/home/why-choose-us/ChooseUsSection";
-import BackLink from "../components/home/smartwood_backlink/BackLink";
-import ReferralBanner from "../components/home/referral_banner/ReferralBanner";
 
 
-
-export default function Home({ data }) {
+export default function About() {
   return (
     <Layout>
-      <main className="main-content-container">
-        <Header />
-        <ReferralBanner />
-        <BackLink />
-        <ServicesSection />
-        <ChooseWoodSection />
-        <ChooseUsSection />
+      <main className="about-main-content" >
+        <div className="about-page-bg"></div>
+
+        <header className="about-us-header">
+          <h1 className="about-us-heading">About us</h1>
+          <p className="about-us-subheading">Generations of Experience</p>
+        </header>
+
+        <p className="about-us-text">
+        Smartwood Flooring Scotland are an independent, family run flooring company that specialises in solid hardwood flooring, engineered flooring, luxury vinyl tile (LVT), and, renovation and restoration, based in Kilwinning, North Ayrshire.
+        </p>
+        <p className="about-us-text">
+        In 2005 Alex started his career in flooring working for his parents as a labourer while attending college to study carpentry and joinery. He worked his way up his <a href="https://www.smartwoodflooring.com/" className="about-us-link">Parent's Company</a> and soon Alex started overseeing his own jobs. After doing the <a href="https://f-ball.com/en/training/" className="about-us-link">F.ball </a> screeding, and,  karndean courses, Alex would then go on to spend some time in Germany learning premium sanding technologies and other techniques that he brought back with him.
+        </p>
+        <p className="about-us-text">
+        In 2019 Alex moved to north Ayrshire and founded SmartWood Flooring Scotland, bringing with him all the expertise he has acquired in nearly two decades of constant work and study, as well as Brandon, his nephew and former apprentice whose training Alex has had an active hand in since day one. Together with Alex's wife, Tahnee who handles the business's administration and logistics, they ensure that the traditional SmartWood quality is at the forefront of their work in Kilwinning.
+        </p>
+
       </main>
     </Layout>
   );
 }
+
 
 export const Head = () => (
   <>
@@ -64,3 +69,4 @@ export const Head = () => (
     <title>Top Quality Flooring in Kilwinning, North Ayrshire | SmartWood Flooring</title>
   </>
 );
+

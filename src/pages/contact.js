@@ -1,34 +1,35 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Header from "../components/home/Header";
-import ServicesSection from "../components/home/services/ServicesSection";
-import ChooseWoodSection from "../components/home/choose-wood-flooring/ChooseWoodSection";
-import ChooseUsSection from "../components/home/why-choose-us/ChooseUsSection";
-import BackLink from "../components/home/smartwood_backlink/BackLink";
-import ReferralBanner from "../components/home/referral_banner/ReferralBanner";
+import ContactForm from "../components/contact/ContactForm";
 
 
 
-export default function Home({ data }) {
+
+export default function Contact() {
   return (
     <Layout>
-      <main className="main-content-container">
-        <Header />
-        <ReferralBanner />
-        <BackLink />
-        <ServicesSection />
-        <ChooseWoodSection />
-        <ChooseUsSection />
+      <main className="contact-main">
+        <div className="contact-page-bg"></div>
+        <header className="contact-header">
+          <h1 className="contact-heading">Get in Touch</h1>
+          <p className="contact-subheading">
+            for a FREE consultation without obligation
+          </p>
+        </header>
+
+        <ContactForm />
       </main>
     </Layout>
   );
 }
+
 
 export const Head = () => (
   <>
     <meta charSet="UTF-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
     <meta
       name="description"
       content="Expert Floor Fitters, Specialising in Hardwood, Engineered Wood, LVT and Restoration in Kilwinning, North Ayrshire"

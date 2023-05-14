@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="150"
+   height="150"
+   viewBox="0 0 9 9"
+   version="1.1"
+   id="svg42"
+   sodipodi:docname="LVT.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs46" />
+  <sodipodi:namedview
+     id="namedview44"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="1.005"
+     inkscape:cx="73.134328"
+     inkscape:cy="-87.064677"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg42" />
+  <title
+     id="title25">dashboard-tile-solid</title>
+  <g
+     id="Layer_2"
+     data-name="Layer 2"
+     transform="scale(0.1875)">
+    <g
+       id="invisible_box"
+       data-name="invisible box">
+      <rect
+         width="48"
+         height="48"
+         fill="none"
+         id="rect27"
+         x="0"
+         y="0" />
+    </g>
+    <g
+       id="icons_Q2"
+       data-name="icons Q2">
+      <g
+         id="g38">
+        <path
+           d="M 20,30 H 8 a 2,2 0 0 0 -2,2 v 10 a 2,2 0 0 0 2,2 h 12 a 2,2 0 0 0 2,-2 V 32 a 2,2 0 0 0 -2,-2 z"
+           id="path30"
+           style="fill:#ffffff" />
+        <path
+           d="M 20,4 H 8 A 2,2 0 0 0 6,6 v 18 a 2,2 0 0 0 2,2 h 12 a 2,2 0 0 0 2,-2 V 6 A 2,2 0 0 0 20,4 Z"
+           id="path32"
+           style="fill:#ffffff" />
+        <path
+           d="M 40,4 H 28 a 2,2 0 0 0 -2,2 v 10 a 2,2 0 0 0 2,2 h 12 a 2,2 0 0 0 2,-2 V 6 A 2,2 0 0 0 40,4 Z"
+           id="path34"
+           style="fill:#ffffff" />
+        <path
+           d="M 40,22 H 28 a 2,2 0 0 0 -2,2 v 18 a 2,2 0 0 0 2,2 h 12 a 2,2 0 0 0 2,-2 V 24 a 2,2 0 0 0 -2,-2 z"
+           id="path36"
+           style="fill:#ffffff" />
+      </g>
+    </g>
+  </g>
+  <metadata
+     id="metadata206">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>dashboard-tile-solid</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

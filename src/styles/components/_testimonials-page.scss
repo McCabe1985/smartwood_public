@@ -1,0 +1,118 @@
+@use '../utils/' as *;
+
+
+
+.testimonials-main-content-container{
+    @include flexContainer(column);
+    width: 100%;
+    position: relative;
+   .testimonials-page-bg{
+    @include parallaxBg;
+    background-image: url(../images/background-anim.svg);
+  }
+
+   .testimonials-header{
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 1rem;
+    .testimonials-heading {
+        font-size: 1.3rem;
+        font-family: $heading-font;
+        text-align: left;
+        margin-left: 1rem;
+        @include sm {
+          font-size: 2.5rem;
+        }
+        @include xl {
+          font-size: 6rem;
+        }
+        &::before {
+            content: '';
+            display: block;
+            width: 50%;
+            padding-top: 0.5rem;
+            border-top: 3px solid white;
+            @include sm {
+                border-top: 5px solid white;
+              }
+              @include xl {
+                width: 25%;
+                border-top: 10px solid white;
+              }
+        }
+      }
+
+      .testimonials-subheading {
+        text-align: left;
+        font-size: 0.9rem;
+        margin-left: 1rem;
+        @include sm {
+            font-size: 2rem;
+          }
+          @include xl {
+            font-size: 3rem;
+          }
+        &::after {
+            content: '';
+            display: block;
+            width: 75%;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid white;
+            @include sm {
+                border-bottom: 5px solid white;
+              }
+              @include xl {
+                width: 50%;
+                border-bottom: 10px solid white;
+              }
+        }
+      }
+}
+    .testimonial-block-container{
+        margin: 1rem 0;
+        @include flexContainer(column);
+        align-items: center;
+        width: 100%;
+        @include lg {
+            width: 40%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .testimonial-container{
+            @include flexContainer(column);
+            align-items: flex-start;
+            justify-content: space-around;
+            width: 14rem;
+            border: 0.3rem solid rgba(161, 161, 161, 0.6);
+            border-radius: 5px;
+            background-color: rgb(236, 236, 236);
+            padding: 1rem;
+            margin: 2rem auto;
+            @include md {
+                width: 90%;
+            }
+           
+    
+            .testimonial-heading{
+                color: #4294DE;
+                font-family: $emphasis-font;
+                margin-bottom: 1rem;
+            }
+            .testimonial-author{
+                margin-top: 1rem;
+                font-size: 0.9rem;
+                font-family: $emphasis-font;
+                color: #333;
+            }
+        }
+        .testimonial-img {
+            height: auto;
+            width: 30%;
+            margin: 1rem 0rem;
+            @include md {
+                margin: 2rem 0rem;
+            }
+        }
+    }
+}

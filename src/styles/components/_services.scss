@@ -1,0 +1,133 @@
+@use "../utils/" as *;
+
+.services-container {
+  @include flexContainer(column);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  position: relative;
+  padding-bottom: 6rem;
+  @include md {
+    background-color: transparent;
+  }
+
+  .services-bg {
+    @include md {
+      @include parallaxBg;
+    background-image: url(../images/background-anim.svg);
+    }
+    
+  }
+
+  .services-intro-heading-container{
+    @include flexContainer(column);
+    align-items: center;
+    width: 100%;
+    background: black;
+    padding: 1rem 0rem;
+    margin: 0 0 2rem 0;
+  }
+  .services-heading-container {
+    margin-top: 2rem;
+    @include flexContainer(column);
+    width: 100%;
+    .services-heading {
+      font-size: 1.2rem;
+      font-family: $heading-font;
+      margin-bottom: 1rem;
+      text-align: center;
+     
+      @include md {
+        text-align: start;
+        font-size: 2.5rem;
+      }
+    }
+  }
+  
+  .services-intro-container {
+    padding-left: 1.2rem;
+    width: 75%;
+    font-weight: 600;
+    margin-bottom: 5rem;
+    text-align: center;
+    line-height: 2;
+    font-family: $emphasis-font;
+    @include md {
+      width: 40%;
+    }
+  }
+.service-card-section{
+    @include flexContainer(column);
+    margin-bottom: 4rem;
+    @include lg {
+        @include flexContainer(row);
+        width: 100%;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-top: 4rem;
+    }
+    .services-icon-container {
+      position: relative;
+      height: 6rem;
+      width: 6rem;
+      .services-icon {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .service-card-container {
+        max-width: 20rem;
+        @include flexContainer(column);
+        margin: 1rem 1rem 3rem 1rem;
+       
+        .service-text-container {
+          width: 90%;
+          margin-top: 2rem;
+          @include flexContainer(column);
+          .service-heading {
+            width: 100%;
+            font-size: 1.5rem;
+            font-family: $heading-font;
+            margin-bottom: 2rem;
+            text-align: left;
+            text-transform: uppercase;
+            &::before {
+              content: '';
+              display: block;
+              width: 50%;
+              padding-top: 0.5rem;
+              border-top: 3px solid white;
+              @include sm {
+                  border-top: 5px solid white;
+                }
+                @include xl {
+                  width: 25%;
+                  border-top: 5px solid white;
+                }
+          }
+            &::after {
+              content: '';
+              display: block;
+              width: 75%;
+              padding-bottom: 0.5rem;
+              border-bottom: 3px solid white;
+              @include sm {
+                  border-bottom: 5px solid white;
+                }
+                @include xl {
+                  width: 50%;
+                  border-bottom: 5px solid white;
+                }
+          }
+          }
+          .service-info {
+            font-size: 1.2rem;
+          }
+        }
+      }
+}
+  
+}
